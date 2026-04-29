@@ -1,0 +1,62 @@
+Space Miner Balance Table
+========================
+
+Balance algorithm
+-----------------
+1. Prices stay fixed at the approved values
+2. Early items stay unchanged:
+   - cursor
+   - handMiner
+   - laserDrill
+3. Later item bonus penalty:
+   - starts from autoDrill
+   - bonus penalty grows by 5% per tier
+   - later items lose more bonus than earlier items
+4. Effective bonus formula:
+   - adjustedBonus = originalBaseBonus / (1 + penaltyTier * 0.05)
+   - if adjustedBonus >= 1, floor to integer
+   - preserve strictly descending naked efficiency after flooring
+   - if adjustedBonus < 1, keep the original sub-1 bonus so the item is not zeroed
+5. Special upgrade costs:
+   - bronze = baseCost * 20
+   - silver = baseCost * 70
+   - gold = baseCost * 250
+   - diamond = baseCost * 900
+6. Full special set bonus:
+   - buying bronze + silver + gold + diamond gives one extra x2 set bonus
+   - total max multiplier per item = x32
+7. Efficiency curve check:
+   - current naked efficiency remains strictly descending after integer flooring
+
+Columns
+-------
+name | id | baseCost | originalBaseBonus | newBaseBonus | nakedEfficiency | bronze | silver | gold | diamond
+
+游標礦工 | cursor | 15 | 0.5 | 0.5 | 0.033333 | 300 | 1050 | 3750 | 13500
+手動礦工 | handMiner | 32 | 1 | 1 | 0.031250 | 640 | 2240 | 8000 | 28800
+雷射鑽機 | laserDrill | 100 | 3 | 3 | 0.030000 | 2000 | 7000 | 25000 | 90000
+自動鑽機 | autoDrill | 270 | 8 | 7 | 0.025926 | 5400 | 18900 | 67500 | 243000
+鑽探機器人 | drillBot | 550 | 15 | 13 | 0.023636 | 11000 | 38500 | 137500 | 495000
+採礦工廠 | factory | 1335 | 35 | 30 | 0.022472 | 26700 | 93450 | 333750 | 1201500
+採礦飛船 | miningShip | 2800 | 70 | 58 | 0.020714 | 56000 | 196000 | 700000 | 2520000
+無人機群 | droneSwarm | 6300 | 150 | 120 | 0.019048 | 126000 | 441000 | 1575000 | 5670000
+星際母艦 | ship | 13000 | 300 | 230 | 0.017692 | 260000 | 910000 | 3250000 | 11700000
+軌道平台 | orbitalPlatform | 30000 | 650 | 481 | 0.016033 | 600000 | 2100000 | 7500000 | 27000000
+太空站 | station | 72000 | 1500 | 1071 | 0.014875 | 1440000 | 5040000 | 18000000 | 64800000
+小行星基地 | asteroidBase | 176000 | 3500 | 2413 | 0.013710 | 3520000 | 12320000 | 44000000 | 158400000
+戴森環 | dyson | 420000 | 8000 | 5333 | 0.012698 | 8400000 | 29400000 | 105000000 | 378000000
+量子礦機 | quantumMiner | 1100000 | 20000 | 12903 | 0.011730 | 22000000 | 77000000 | 275000000 | 990000000
+恆星熔爐 | starForge | 3460000 | 60000 | 37500 | 0.010838 | 69200000 | 242200000 | 865000000 | 3114000000
+黑洞提取器 | blackHole | 12100000 | 200000 | 121212 | 0.010018 | 242000000 | 847000000 | 3025000000 | 10890000000
+銀河核心 | galaxyCore | 31000000 | 500000 | 294117 | 0.009488 | 620000000 | 2170000000 | 7750000000 | 27900000000
+宇宙熔爐 | universeForge | 99000000 | 1500000 | 857142 | 0.008658 | 1980000000 | 6930000000 | 24750000000 | 89100000000
+多元礦機 | multiverseMiner | 340000000 | 5000000 | 2777777 | 0.008170 | 6800000000 | 23800000000 | 85000000000 | 306000000000
+現實引擎 | realityEngine | 1090000000 | 15000000 | 8108108 | 0.007439 | 21800000000 | 76300000000 | 272500000000 | 981000000000
+時間膨脹器 | timeDilation | 3800000000 | 50000000 | 26315789 | 0.006925 | 76000000000 | 266000000000 | 950000000000 | 3420000000000
+歐米伽點 | omegaPoint | 15938000000 | 200000000 | 102564102 | 0.006435 | 318760000000 | 1115660000000 | 3984500000000 | 14344200000000
+任意門礦倉 | anywhereDoor | 50000000000 | 600000000 | 300000000 | 0.006000 | 1000000000000 | 3500000000000 | 12500000000000 | 45000000000000
+天元螺旋核心 | spiralCore | 157280000000 | 1800000000 | 878048780 | 0.005583 | 3145600000000 | 11009600000000 | 39320000000000 | 141552000000000
+月靈髓主機 | moonCell | 510000000000 | 5600000000 | 2666666666 | 0.005229 | 10200000000000 | 35700000000000 | 127500000000000 | 459000000000000
+初號機採掘體 | evaExcavator | 1724540000000 | 18000000000 | 8372093023 | 0.004855 | 34490800000000 | 120717800000000 | 431135000000000 | 1552086000000000
+無限手套熔爐 | infinityForge | 6000000000000 | 60000000000 | 27272727272 | 0.004545 | 120000000000000 | 420000000000000 | 1500000000000000 | 5400000000000000
+阿卡西記錄印鈔機 | akashicPrinter | 21000000000000 | 200000000000 | 88888888888 | 0.004233 | 420000000000000 | 1470000000000000 | 5250000000000000 | 18900000000000000
