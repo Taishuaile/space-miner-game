@@ -98,6 +98,8 @@
             font-size: 150px;
             filter: drop-shadow(0 0 30px rgba(108, 92, 231, 0.6));
             transition: all 0.1s ease-out;
+            transform-origin: center center;
+            will-change: transform, filter, opacity;
         }
 
         .planet-container.clicked {
@@ -109,9 +111,9 @@
         }
 
         @keyframes planetFlash {
-            0% { filter: drop-shadow(0 0 30px rgba(108, 92, 231, 0.6)) brightness(1); transform: scale(1); }
-            50% { filter: drop-shadow(0 0 100px rgba(162, 155, 254, 1)) brightness(1.6); transform: scale(0.9); }
-            100% { filter: drop-shadow(0 0 30px rgba(108, 92, 231, 0.6)) brightness(1); transform: scale(1); }
+            0% { filter: drop-shadow(0 0 30px rgba(108, 92, 231, 0.6)) brightness(1); }
+            50% { filter: drop-shadow(0 0 100px rgba(162, 155, 254, 1)) brightness(1.6); }
+            100% { filter: drop-shadow(0 0 30px rgba(108, 92, 231, 0.6)) brightness(1); }
         }
 
         .click-particle {
@@ -683,7 +685,7 @@
             <div class="per-sec">每秒星能: <span id="gps">0</span></div>
         </div>
         <div class="planet-container" id="planetBtn">
-            <div class="planet">🪐</div>
+            <div class="planet">🌍</div>
             <div class="orbit-container" id="orbitContainer"></div>
         </div>
     </div>
@@ -714,4 +716,5 @@
     <script src="game.js"></script>
 </body>
 </html>
+
 

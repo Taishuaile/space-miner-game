@@ -4,7 +4,6 @@
           autoBuyEnabled: false,
           numberUnitEnabled: false,
           goldUpgrades: {},
-          specialUpgrades: {},
           specialUpgrades: {
             cursor: { bronze: { purchased: false, unlocked: false, cost: 500 }, silver: { purchased: false, unlocked: false, cost: 2000 }, gold: { purchased: false, unlocked: false, cost: 10000 } },
             handMiner: { bronze: { purchased: false, unlocked: false, cost: 800 }, silver: { purchased: false, unlocked: false, cost: 3000 }, gold: { purchased: false, unlocked: false, cost: 15000 } },
@@ -35,41 +34,41 @@
             infinityForge: { bronze: { purchased: false, unlocked: false, cost: 1050000000000000 }, silver: { purchased: false, unlocked: false, cost: 3500000000000000 }, gold: { purchased: false, unlocked: false, cost: 17500000000000000 } },
             akashicPrinter: { bronze: { purchased: false, unlocked: false, cost: 3900000000000000 }, silver: { purchased: false, unlocked: false, cost: 13000000000000000 }, gold: { purchased: false, unlocked: false, cost: 65000000000000000 } }
           },
-          goldUpgrades: {},
-                  upgrades: {
-                cursor: { id: 'cursor', name: '游標礦工', icon: '🖱️', baseCost: 15, baseBonus: 0.5, count: 0, desc: '一隻滑鼠，一個夢想，外加無限點點點。', orbitRadius: 82, speed: 2, goldThreshold: 10, shopUnlocked: true },
-                handMiner: { id: 'handMiner', name: '手動礦工', icon: '🧤', baseCost: 32, baseBonus: 1, count: 0, desc: 'KPI 靠雙手，效率靠意志，HR 看了先搖頭。', orbitRadius: 70, speed: 1.8, goldThreshold: 10, shopUnlocked: false },
-                laserDrill: { id: 'laserDrill', name: '雷射鑽機', icon: '🔦', baseCost: 100, baseBonus: 3, count: 0, desc: '不是手電筒，是把石頭照到懷疑人生。', orbitRadius: 80, speed: 1.6, goldThreshold: 10, shopUnlocked: false },
-                autoDrill: { id: 'autoDrill', name: '自動鑽機', icon: '⚙️', baseCost: 400, baseBonus: 8, count: 0, desc: '你睡你的，它卷它的，24 小時在線內卷。', orbitRadius: 90, speed: 1.4, goldThreshold: 10, shopUnlocked: false },
-                drillBot: { id: 'drillBot', name: '鑽探機器人', icon: '🤖', baseCost: 1000, baseBonus: 15, count: 0, desc: 'AI 還沒統治世界，先幫你把礦挖完。', orbitRadius: 100, speed: 1.3, goldThreshold: 10, shopUnlocked: false },
-                factory: { id: 'factory', name: '採礦工廠', icon: '🏭', baseCost: 2500, baseBonus: 35, count: 0, desc: '把手作副業直接做成宇宙級量產地獄。', orbitRadius: 110, speed: 1.2, goldThreshold: 10, shopUnlocked: false },
-                miningShip: { id: 'miningShip', name: '採礦飛船', icon: '🚀', baseCost: 6000, baseBonus: 70, count: 0, desc: '地表太擠了，直接飛去隔壁隕石帶搶業績。', orbitRadius: 120, speed: 1.1, goldThreshold: 10, shopUnlocked: false },
-                droneSwarm: { id: 'droneSwarm', name: '無人機群', icon: '🛸', baseCost: 15000, baseBonus: 150, count: 0, desc: '一台叫方便，一群叫天上突然很有壓力。', orbitRadius: 130, speed: 1.0, goldThreshold: 10, shopUnlocked: false },
-                ship: { id: 'ship', name: '星際母艦', icon: '🛰️', baseCost: 35000, baseBonus: 300, count: 0, desc: '這不是船，這是把預算表直接開成旗艦版。', orbitRadius: 140, speed: 0.9, goldThreshold: 10, shopUnlocked: false },
-                orbitalPlatform: { id: 'orbitalPlatform', name: '軌道平台', icon: '🪐', baseCost: 100000, baseBonus: 650, count: 0, desc: '在星球頭上蓋工地，主打一個沒有鄰居抗議。', orbitRadius: 150, speed: 0.8, goldThreshold: 10, shopUnlocked: false },
-                station: { id: 'station', name: '太空站', icon: '🛰', baseCost: 300000, baseBonus: 1500, count: 0, desc: '把臨時據點住成豪華總部，物流和野心一起升級。', orbitRadius: 160, speed: 0.7, goldThreshold: 10, shopUnlocked: false },
-                asteroidBase: { id: 'asteroidBase', name: '小行星基地', icon: '☄️', baseCost: 800000, baseBonus: 3500, count: 0, desc: '別人看到危機，你看到房地產與礦權雙贏。', orbitRadius: 170, speed: 0.6, goldThreshold: 10, shopUnlocked: false },
-                dyson: { id: 'dyson', name: '戴森環', icon: '🌞', baseCost: 2000000, baseBonus: 8000, count: 0, desc: '把太陽包起來用，能源部門直接原地封神。', orbitRadius: 180, speed: 0.5, goldThreshold: 10, shopUnlocked: false },
-                quantumMiner: { id: 'quantumMiner', name: '量子礦機', icon: '⚛️', baseCost: 8000000, baseBonus: 20000, count: 0, desc: '同時在挖與沒挖之間，直到收益被你觀測。', orbitRadius: 190, speed: 0.4, goldThreshold: 10, shopUnlocked: false },
-                starForge: { id: 'starForge', name: '恆星熔爐', icon: '⭐', baseCost: 25000000, baseBonus: 60000, count: 0, desc: '把恆星當鍋爐，這已經不是熱血，是熱核。', orbitRadius: 200, speed: 0.35, goldThreshold: 10, shopUnlocked: false },
-                blackHole: { id: 'blackHole', name: '黑洞提取器', icon: '🕳️', baseCost: 85000000, baseBonus: 200000, count: 0, desc: '從黑洞嘴邊搶飯吃，風險管理看了直接登出。', orbitRadius: 220, speed: 0.25, goldThreshold: 10, shopUnlocked: false },
-                galaxyCore: { id: 'galaxyCore', name: '銀河核心', icon: '🌌', baseCost: 250000000, baseBonus: 500000, count: 0, desc: '不是接管市場，是接管整條銀河的電表。', orbitRadius: 240, speed: 0.2, goldThreshold: 10, shopUnlocked: false },
-                universeForge: { id: 'universeForge', name: '宇宙熔爐', icon: '🌠', baseCost: 800000000, baseBonus: 1500000, count: 0, desc: '把宇宙當材料庫，工藝部門徹底無法下班。', orbitRadius: 260, speed: 0.15, goldThreshold: 10, shopUnlocked: false },
-                multiverseMiner: { id: 'multiverseMiner', name: '多元礦機', icon: '🪄', baseCost: 2700000000, baseBonus: 5000000, count: 0, desc: '這個宇宙挖不夠？那就去隔壁宇宙借產能。', orbitRadius: 280, speed: 0.1, goldThreshold: 10, shopUnlocked: false },
-                realityEngine: { id: 'realityEngine', name: '現實引擎', icon: '🧠', baseCost: 8200000000, baseBonus: 15000000, count: 0, desc: '當現實不夠賺，就重寫現實，聽起來非常合理。', orbitRadius: 300, speed: 0.08, goldThreshold: 10, shopUnlocked: false },
-                timeDilation: { id: 'timeDilation', name: '時間膨脹器', icon: '⏳', baseCost: 27500000000, baseBonus: 50000000, count: 0, desc: '別人一天 24 小時，你的礦工一天 240 小時。', orbitRadius: 320, speed: 0.05, goldThreshold: 10, shopUnlocked: false },
-                omegaPoint: { id: 'omegaPoint', name: '歐米伽點', icon: '🔱', baseCost: 112000000000, baseBonus: 200000000, count: 0, desc: '版本答案本人，宇宙看到你都要先說一聲大佬。', orbitRadius: 350, speed: 0.03, goldThreshold: 10, shopUnlocked: false },
-                anywhereDoor: { id: 'anywhereDoor', name: '任意門礦倉', icon: '🚪', baseCost: 360000000000, baseBonus: 600000000, count: 0, desc: '今天挖這顆，明天挖隔壁宇宙，物流部門已經無法理解。', orbitRadius: 380, speed: 0.025, goldThreshold: 10, shopUnlocked: false },
-                spiralCore: { id: 'spiralCore', name: '天元螺旋核心', icon: '🌀', baseCost: 1200000000000, baseBonus: 1800000000, count: 0, desc: '相信你的礦機，相信相信礦機的你，然後直接鑽穿維度。', orbitRadius: 410, speed: 0.022, goldThreshold: 10, shopUnlocked: false },
-                moonCell: { id: 'moonCell', name: '月靈髓主機', icon: '🌙', baseCost: 4000000000000, baseBonus: 5600000000, count: 0, desc: '把月球變成伺服器，順便把算力拿去算哪裡還有礦。', orbitRadius: 440, speed: 0.019, goldThreshold: 10, shopUnlocked: false },
-                evaExcavator: { id: 'evaExcavator', name: '初號機採掘體', icon: '🧬', baseCost: 14000000000000, baseBonus: 18000000000, count: 0, desc: '暴走模式一開，礦脈和員工手冊都一起撕開。', orbitRadius: 470, speed: 0.016, goldThreshold: 10, shopUnlocked: false },
-                infinityForge: { id: 'infinityForge', name: '無限手套熔爐', icon: '💍', baseCost: 50000000000000, baseBonus: 60000000000, count: 0, desc: '打個響指不是消失一半人口，是帳面收益直接翻頁。', orbitRadius: 500, speed: 0.013, goldThreshold: 10, shopUnlocked: false },
-                akashicPrinter: { id: 'akashicPrinter', name: '阿卡西記錄印鈔機', icon: '📚', baseCost: 180000000000000, baseBonus: 200000000000, count: 0, desc: '把宇宙所有已發生與未發生的礦權都先列印成你的。', orbitRadius: 540, speed: 0.01, goldThreshold: 10, shopUnlocked: false }
+          upgrades: {
+                cursor: { id: 'cursor', name: '石器採集隊', icon: '🪨', baseCost: 10, baseBonus: 0.1, count: 0, desc: '以石器與徒手採集資源，是文明最早的生產行為。', orbitRadius: 82, speed: 2, goldThreshold: 10, shopUnlocked: true },
+                handMiner: { id: 'handMiner', name: '營火工坊', icon: '🔥', baseCost: 24, baseBonus: 0.2, count: 0, desc: '學會用火與基礎加工，讓每次採集更有效率。', orbitRadius: 70, speed: 1.8, goldThreshold: 10, shopUnlocked: false },
+                laserDrill: { id: 'laserDrill', name: '青銅鑄造坊', icon: '🛡️', baseCost: 67, baseBonus: 0.5, count: 0, desc: '金屬工具出現後，資源開採從體力活進入工藝化。', orbitRadius: 80, speed: 1.6, goldThreshold: 10, shopUnlocked: false },
+                autoDrill: { id: 'autoDrill', name: '鐵器鍛造廠', icon: '⚒️', baseCost: 445, baseBonus: 2, count: 0, desc: '更耐用的鐵器提升大規模開採能力。', orbitRadius: 90, speed: 1.4, goldThreshold: 10, shopUnlocked: false },
+                drillBot: { id: 'drillBot', name: '水力機械坊', icon: '🛞', baseCost: 953, baseBonus: 3, count: 0, desc: '借助水力與簡單機械，生產效率穩定提高。', orbitRadius: 100, speed: 1.3, goldThreshold: 10, shopUnlocked: false },
+                factory: { id: 'factory', name: '行會製造所', icon: '🏰', baseCost: 1985, baseBonus: 5, count: 0, desc: '分工制度成形，工藝從個體技術轉向組織化生產。', orbitRadius: 110, speed: 1.2, goldThreshold: 10, shopUnlocked: false },
+                miningShip: { id: 'miningShip', name: '遠洋探勘船隊', icon: '⛵', baseCost: 4000, baseBonus: 7, count: 0, desc: '航海技術打開新資源航線，採集範圍擴展到全球。', orbitRadius: 120, speed: 1.1, goldThreshold: 10, shopUnlocked: false },
+                droneSwarm: { id: 'droneSwarm', name: '蒸汽礦機列車', icon: '🚂', baseCost: 10000, baseBonus: 13, count: 0, desc: '蒸汽動力讓輸送與挖掘進入機械化量產。', orbitRadius: 130, speed: 1.0, goldThreshold: 10, shopUnlocked: false },
+                ship: { id: 'ship', name: '電網調度中心', icon: '⚡', baseCost: 23333, baseBonus: 24, count: 0, desc: '電力基礎建設讓資源轉換效率大幅提升。', orbitRadius: 140, speed: 0.9, goldThreshold: 10, shopUnlocked: false },
+                orbitalPlatform: { id: 'orbitalPlatform', name: '重工機械基地', icon: '🏭', baseCost: 66667, baseBonus: 45, count: 0, desc: '內燃機與重工裝備讓大型工程可快速部署。', orbitRadius: 150, speed: 0.8, goldThreshold: 10, shopUnlocked: false },
+                station: { id: 'station', name: '全球供應鏈站', icon: '🚚', baseCost: 200000, baseBonus: 90, count: 0, desc: '跨區物流成熟，資源、設備與人力能高速流動。', orbitRadius: 160, speed: 0.7, goldThreshold: 10, shopUnlocked: false },
+                asteroidBase: { id: 'asteroidBase', name: '核能研究設施', icon: '☢️', baseCost: 533333, baseBonus: 190, count: 0, desc: '高密度能源技術讓文明踏入能源躍遷前夜。', orbitRadius: 170, speed: 0.6, goldThreshold: 10, shopUnlocked: false },
+                dyson: { id: 'dyson', name: '近地軌道電站', icon: '🛰️', baseCost: 1333333, baseBonus: 380, count: 0, desc: '以軌道發電與能源回傳技術，突破地表供能上限。', orbitRadius: 180, speed: 0.5, goldThreshold: 10, shopUnlocked: false },
+                quantumMiner: { id: 'quantumMiner', name: '超級計算中心', icon: '🖥️', baseCost: 5333333, baseBonus: 850, count: 0, desc: '大規模計算優化採集、分配與建設決策。', orbitRadius: 190, speed: 0.4, goldThreshold: 10, shopUnlocked: false },
+                starForge: { id: 'starForge', name: '全球資料雲網', icon: '🌐', baseCost: 16666667, baseBonus: 2100, count: 0, desc: '全域連網將知識與資源調度整合成即時系統。', orbitRadius: 200, speed: 0.35, goldThreshold: 10, shopUnlocked: false },
+                blackHole: { id: 'blackHole', name: '自動化製造群', icon: '🤖', baseCost: 56666667, baseBonus: 6000, count: 0, desc: '工廠自主協作，生產效率開始脫離人力瓶頸。', orbitRadius: 220, speed: 0.25, goldThreshold: 10, shopUnlocked: false },
+                galaxyCore: { id: 'galaxyCore', name: '城市感測中樞', icon: '🏙️', baseCost: 166666667, baseBonus: 13000, count: 0, desc: '大規模感測與調控使城市成為可優化的能源系統。', orbitRadius: 240, speed: 0.2, goldThreshold: 10, shopUnlocked: false },
+                universeForge: { id: 'universeForge', name: '聚變能源試驗場', icon: '🔋', baseCost: 533333333, baseBonus: 32000, count: 0, desc: '穩定高功率清潔能源成為 1 級文明關鍵拼圖。', orbitRadius: 260, speed: 0.15, goldThreshold: 10, shopUnlocked: false },
+                multiverseMiner: { id: 'multiverseMiner', name: '軌道建造機器人', icon: '🦾', baseCost: 1800000000, baseBonus: 90000, count: 0, desc: '機器人可在高風險環境持續施工與維運。', orbitRadius: 280, speed: 0.1, goldThreshold: 10, shopUnlocked: false },
+                realityEngine: { id: 'realityEngine', name: '行星工程指揮台', icon: '🗺️', baseCost: 5466666667, baseBonus: 240000, count: 0, desc: '以全域模型統籌地表、海洋與大氣的建設策略。', orbitRadius: 300, speed: 0.08, goldThreshold: 10, shopUnlocked: false },
+                timeDilation: { id: 'timeDilation', name: '氣候修復網路', icon: '🌦️', baseCost: 18333333333, baseBonus: 700000, count: 0, desc: '工程系統可長期修復環境並維持穩定生態。', orbitRadius: 320, speed: 0.05, goldThreshold: 10, shopUnlocked: false },
+                omegaPoint: { id: 'omegaPoint', name: '量子通訊主幹', icon: '📡', baseCost: 74666666667, baseBonus: 2400000, count: 0, desc: '超低延遲協同讓全球決策與控制幾乎同步。', orbitRadius: 350, speed: 0.03, goldThreshold: 10, shopUnlocked: false },
+                anywhereDoor: { id: 'anywhereDoor', name: 'AI 科學家聯盟', icon: '🧠', baseCost: 240000000000, baseBonus: 6000000, count: 0, desc: 'AI 自主提出假說、設計實驗並迭代技術路線。', orbitRadius: 380, speed: 0.025, goldThreshold: 10, shopUnlocked: false },
+                spiralCore: { id: 'spiralCore', name: '自主研發引擎', icon: '🧬', baseCost: 800000000000, baseBonus: 15000000, count: 0, desc: '研發流程自動化，技術突破速度持續加速。', orbitRadius: 410, speed: 0.022, goldThreshold: 10, shopUnlocked: false },
+                moonCell: { id: 'moonCell', name: '通用機器人群體', icon: '🦿', baseCost: 2666666666667, baseBonus: 42000000, count: 0, desc: '通用型機器人可跨產業執行高精度任務。', orbitRadius: 440, speed: 0.019, goldThreshold: 10, shopUnlocked: false },
+                evaExcavator: { id: 'evaExcavator', name: '行星級能源管網', icon: '🌎', baseCost: 9333333333333, baseBonus: 120000000, count: 0, desc: '全球能源調度高度整合，接近 1 級文明標準。', orbitRadius: 470, speed: 0.016, goldThreshold: 10, shopUnlocked: false },
+                infinityForge: { id: 'infinityForge', name: '地月工業體系', icon: '🌕', baseCost: 33333333333333, baseBonus: 360000000, count: 0, desc: '地月分工形成閉環產業，資源利用率大幅躍升。', orbitRadius: 500, speed: 0.013, goldThreshold: 10, shopUnlocked: false },
+                akashicPrinter: { id: 'akashicPrinter', name: '文明奇點核心', icon: '✨', baseCost: 120000000000000, baseBonus: 1200000000, count: 0, desc: '人類與 AI 協作達到峰值，正式邁向 1 級文明。', orbitRadius: 540, speed: 0.01, goldThreshold: 10, shopUnlocked: false }
             }
         };
         const scoreEl = document.getElementById('score');
         const gpsEl = document.getElementById('gps');
         const planetBtn = document.getElementById('planetBtn');
+        const planetEl = planetBtn.querySelector('.planet');
         const upgradesList = document.getElementById('upgrades-list');
         const orbitContainer = document.getElementById('orbitContainer');
         const shopTooltip = document.createElement('div');
@@ -85,11 +84,15 @@
         const FAST_RESOURCE_RENDER_INTERVAL_MS = 50;
         const SLOW_RESOURCE_RENDER_INTERVAL_MS = 100;
         const UI_STATE_REFRESH_INTERVAL_MS = 500;
+        const OFFLINE_GAIN_CAP_SECONDS = Infinity;
+        const SIDE_ITEM_ICON_CAP_PER_TYPE = 80;
+        const CURSOR_RING_CAPS = [20, 25, 30, 10];
+        const CURSOR_ORBIT_MAX_VISIBLE = CURSOR_RING_CAPS.reduce((sum, cap) => sum + cap, 0);
         const SPECIAL_TIERS = [
-            { tier: 'bronze', label: '銅', threshold: 10, color: '#cd7f32', glow: 'drop-shadow(0 0 12px #cd7f32) drop-shadow(0 0 24px rgba(205, 127, 50, 0.95)) brightness(1.6)' },
-            { tier: 'silver', label: '銀', threshold: 30, color: '#dfe6eb', glow: 'drop-shadow(0 0 14px #dfe6eb) drop-shadow(0 0 28px rgba(223, 230, 235, 0.98)) brightness(1.7)' },
-            { tier: 'gold', label: '金', threshold: 50, color: '#ffd700', glow: 'drop-shadow(0 0 16px #ffd700) drop-shadow(0 0 32px rgba(255, 215, 0, 1)) brightness(1.8)' },
-            { tier: 'diamond', label: '鑽石', threshold: 70, color: '#7df9ff', glow: 'drop-shadow(0 0 16px #7df9ff) drop-shadow(0 0 34px rgba(125, 249, 255, 1)) brightness(1.95)' }
+            { tier: 'bronze', label: '銅', threshold: 10, color: '#c57a38', glow: 'sepia(1) hue-rotate(332deg) saturate(2.4) brightness(0.98) contrast(1.18)' },
+            { tier: 'silver', label: '銀', threshold: 20, color: '#e6edf3', glow: 'grayscale(1) saturate(0.15) brightness(1.32) contrast(1.22)' },
+            { tier: 'gold', label: '金', threshold: 30, color: '#ffcf33', glow: 'sepia(1) hue-rotate(352deg) saturate(4.3) brightness(1.14) contrast(1.2)' },
+            { tier: 'diamond', label: '鑽石', threshold: 40, color: '#78f6ff', glow: 'hue-rotate(185deg) saturate(3.2) brightness(1.24) contrast(1.22)' }
         ];
         const BALANCE_SETTINGS = {
             startingEfficiency: 0.033,
@@ -306,7 +309,6 @@
         }
 
         function ensureSpecialTierShape() {
-            syncUpgradeBalance();
             for (let key in game.specialUpgrades) {
                 const special = game.specialUpgrades[key];
                 if (!special) continue;
@@ -371,10 +373,12 @@
             const toggleBtn = document.getElementById('goldToggle');
             if (container.classList.contains('hidden')) {
                 container.classList.remove('hidden');
+                container.style.display = 'flex';
                 toggleBtn.textContent = '收合';
                 toggleBtn.classList.add('active');
             } else {
                 container.classList.add('hidden');
+                container.style.display = 'none';
                 toggleBtn.textContent = '展開';
                 toggleBtn.classList.remove('active');
             }
@@ -492,9 +496,12 @@
         }
 
         function bindShopTooltip(el, content) {
+            el._tooltipContent = content;
             el.removeAttribute('title');
+            if (el.dataset.tooltipBound === 'true') return;
+            el.dataset.tooltipBound = 'true';
             el.addEventListener('mouseenter', (event) => {
-                shopTooltip.innerHTML = content;
+                shopTooltip.innerHTML = el._tooltipContent || '';
                 shopTooltip.classList.add('visible');
                 positionShopTooltip(event);
             });
@@ -547,6 +554,10 @@
             requestAnimationFrame(gameLoop);
             setInterval(() => {
                 refreshUiState();
+                const expectedOrbitCount = Math.min(Math.max(0, Number(game.upgrades.cursor.count) || 0), CURSOR_ORBIT_MAX_VISIBLE);
+                if (orbitItems.length !== expectedOrbitCount) {
+                    syncCursorOrbitItems();
+                }
                 updateOrbitAnimation();
                 if (checkAllSpecialUnlocks()) {
                     updateGoldShop();
@@ -652,10 +663,10 @@
         }
 
         function getClickPower() {
-          const cursorCount = game.upgrades.cursor.count;
-          const multiplier = getSpecialMultiplier('cursor');
-  
-          return (1 + cursorCount * 0.5) * multiplier;
+          const cursor = game.upgrades.cursor;
+          const cursorCount = Number.isFinite(cursor.count) ? cursor.count : 0;
+          const cursorUnitEffect = cursor.baseBonus * getSpecialMultiplier('cursor');
+          return 1 + cursorCount * cursorUnitEffect;
         }
 
         function getCost(id) {
@@ -673,10 +684,9 @@
             const power = getClickPower();
             addScore(power);
             game.totalClicks++;
-            const planet = planetBtn.querySelector('.planet');
-            planet.classList.remove('planet-flash');
-            void planet.offsetWidth;
-            planet.classList.add('planet-flash');
+            planetEl.classList.remove('planet-flash');
+            void planetEl.offsetWidth;
+            planetEl.classList.add('planet-flash');
             planetBtn.classList.add('clicked');
             setTimeout(() => planetBtn.classList.remove('clicked'), 100);
             createClickParticle(e.clientX, e.clientY, `+${formatNumber(power)}`);
@@ -795,6 +805,67 @@
             return bestCandidate;
         }
 
+        function getUpgradeTooltipHtml(key, bestCandidate) {
+            const item = game.upgrades[key];
+            const metrics = getUpgradeSelectionMetrics(key);
+            const specialMultiplier = getSpecialMultiplier(key);
+            const specialTiers = getPurchasedSpecialTiers(key);
+            const specialInfo = specialTiers.length > 0
+              ? `<br><span style="color: #ffd700;">特殊強化：${specialTiers.join(' / ')}（總倍率 x${specialMultiplier}）</span>`
+              : '';
+            const showCpInfo = game.autoBuyEnabled;
+            const waitInfo = showCpInfo && metrics.waitTime > 0 && Number.isFinite(metrics.waitTime)
+              ? `<br><span style="color: #74b9ff;">預估等待：${formatNumber(metrics.waitTime)} 秒</span>`
+              : '';
+            const totalInfo = showCpInfo && Number.isFinite(metrics.totalTime)
+              ? `<br><span style="color: #ffeaa7;">總評估時間：${formatNumber(metrics.totalTime)} 秒</span>`
+              : '';
+            const bestChoiceInfo = showCpInfo && bestCandidate && bestCandidate.type === 'upgrade' && bestCandidate.key === key
+              ? '<br><span style="color: #ff4757; font-weight: bold;">目前最佳購買選擇</span>'
+              : '';
+
+            return `
+                <strong>${item.name}</strong><br>
+                ${item.desc}<br>
+                <span style="color: #55efc4;">目前單體效果：+${formatNumber(metrics.bonusPerSec)} 星能/秒</span><br>
+                <span style="color: #fab1a0;">當前數量：${item.count}</span>${specialInfo}${waitInfo}${totalInfo}${bestChoiceInfo}
+            `;
+        }
+
+        function refreshUpgradeCardsInPlace() {
+            const bestCandidate = getBestPurchaseCandidate();
+            const bestKey = bestCandidate && bestCandidate.type === 'upgrade' ? bestCandidate.key : null;
+
+            for (let key in game.upgrades) {
+                const item = game.upgrades[key];
+                if (!item.shopUnlocked) continue;
+                const el = document.getElementById(`upgrade-${key}`);
+                if (!el) {
+                    renderUpgrades();
+                    return;
+                }
+
+                const metrics = getUpgradeSelectionMetrics(key);
+                const specialMultiplier = getSpecialMultiplier(key);
+                const glowFilter = getSpecialGlowFilter(key);
+                const costEl = document.getElementById(`cost-${key}`);
+                const countBadge = document.getElementById(`count-badge-${key}`);
+                const bonusEl = el.querySelector('.bonus');
+                const iconEl = el.querySelector('.icon');
+
+                el.classList.toggle('best-cp', key === bestKey);
+                el.classList.toggle('disabled', !game.score.gte(metrics.cost));
+                if (costEl) costEl.textContent = formatCostDisplay(metrics.cost);
+                if (countBadge) countBadge.textContent = item.count;
+                if (bonusEl) bonusEl.textContent = `+${formatNumber(metrics.bonusPerSec)} / 秒${specialMultiplier > 1 ? ' *' : ''}`;
+                if (iconEl) {
+                    iconEl.style.filter = glowFilter || '';
+                }
+
+                bindShopTooltip(el, getUpgradeTooltipHtml(key, bestCandidate));
+            }
+        }
+
         function renderUpgrades() {
             checkShopUnlocks();
             upgradesList.innerHTML = '';
@@ -820,26 +891,7 @@
                 const glowFilter = getSpecialGlowFilter(key);
                 const currentBonus = metrics.bonusPerSec;
                 const currentCostDisplay = formatCostDisplay(metrics.cost);
-                const specialTiers = getPurchasedSpecialTiers(key);
-                const specialInfo = specialTiers.length > 0
-                  ? `<br><span style="color: #ffd700;">特殊強化：${specialTiers.join(' / ')}（總倍率 x${specialMultiplier}）</span>`
-                  : '';
-                const showCpInfo = game.autoBuyEnabled;
-                const waitInfo = showCpInfo && metrics.waitTime > 0 && Number.isFinite(metrics.waitTime)
-                  ? `<br><span style="color: #74b9ff;">預估等待：${formatNumber(metrics.waitTime)} 秒</span>`
-                  : '';
-                const totalInfo = showCpInfo && Number.isFinite(metrics.totalTime)
-                  ? `<br><span style="color: #ffeaa7;">總評估時間：${formatNumber(metrics.totalTime)} 秒</span>`
-                  : '';
-                const bestChoiceInfo = showCpInfo && key === bestKey
-                  ? '<br><span style="color: #ff4757; font-weight: bold;">目前最佳購買選擇</span>'
-                  : '';
-                const tooltipHtml = `
-                    <strong>${item.name}</strong><br>
-                    ${item.desc}<br>
-                    <span style="color: #55efc4;">目前單體效果：+${formatNumber(currentBonus)} 星能/秒</span><br>
-                    <span style="color: #fab1a0;">當前數量：${item.count}</span>${specialInfo}${waitInfo}${totalInfo}${bestChoiceInfo}
-                `;
+                const tooltipHtml = getUpgradeTooltipHtml(key, bestCandidate);
 
                 div.innerHTML = `
                   <div class="icon" style="${glowFilter ? `filter: ${glowFilter};` : ''}">${item.icon}</div>
@@ -848,7 +900,7 @@
                     <span class="cost">價格: <span id="cost-${key}">${currentCostDisplay}</span></span>
                     <span class="bonus">+${formatNumber(currentBonus)} / 秒${specialMultiplier > 1 ? ' *' : ''}</span>
                   </div>
-                  <div class="count-badge" id="count-badge-${key}">0</div>
+                  <div class="count-badge" id="count-badge-${key}">${item.count}</div>
                 `;
                 upgradesList.appendChild(div);
                 bindShopTooltip(div, tooltipHtml);
@@ -866,25 +918,12 @@
             game.upgrades[id].count++;
             const specialUnlockedNow = checkSpecialUnlock(id);
             updateDisplay();
-            renderUpgrades();
+            refreshUpgradeCardsInPlace();
             if (specialUnlockedNow) {
               updateGoldShop();
             }
-            updateOrbits();
+            syncCursorOrbitItems();
             updateSideItems();
-          }
-        }
-
-        function buyGoldUpgrade(id) {
-          const goldUpgrade = game.goldUpgrades[id];
-          const cost = BigNum.fromNumber(goldUpgrade.cost);
-          if (game.score.gte(cost) && !goldUpgrade.purchased) {
-            game.score = game.score.subtract(cost);
-            goldUpgrade.purchased = true;
-            updateDisplay();
-            renderUpgrades();
-            updateGoldShop();
-            updateOrbits();
           }
         }
 
@@ -895,9 +934,10 @@
                 game.score = game.score.subtract(cost);
                 goldUpgrade.purchased = true;
                 updateDisplay();
-                renderUpgrades();
+                refreshUpgradeCardsInPlace();
                 updateGoldShop();
-                updateOrbits();
+                syncCursorOrbitItems();
+                updateSideItems();
             }
         }
 
@@ -912,8 +952,9 @@
             special[tier].purchased = true;
             console.log(`購買 ${game.upgrades[id].name} ${tierConfig ? tierConfig.label : tier} 特殊強化`);
             updateDisplay();
-            renderUpgrades();
+            refreshUpgradeCardsInPlace();
             updateGoldShop();
+            syncCursorOrbitItems();
             updateSideItems();
           }
         }
@@ -921,13 +962,14 @@
         function multiplyScoreByTen() {
           game.score = game.score.multiplyNumber(10);
           updateDisplay();
-          renderUpgrades();
+          refreshUpgradeCardsInPlace();
           updateGoldShop();
         }
 
         function updateGoldShop() {
           const goldShopContainer = document.getElementById('goldShopContainer');
           const goldControl = document.querySelector('.gold-control');
+          const wasCollapsed = goldShopContainer.classList.contains('hidden');
           goldShopContainer.innerHTML = '';
           let hasAnyItem = false;
           const bestCandidate = getBestPurchaseCandidate();
@@ -1004,7 +1046,24 @@
           }
 
           goldControl.style.display = hasAnyItem ? 'flex' : 'none';
-          goldShopContainer.style.display = hasAnyItem ? 'flex' : 'none';
+          if (!hasAnyItem) {
+              goldShopContainer.style.display = 'none';
+              goldShopContainer.classList.remove('hidden');
+              const toggleBtn = document.getElementById('goldToggle');
+              if (toggleBtn) {
+                  toggleBtn.textContent = '收合';
+                  toggleBtn.classList.add('active');
+              }
+              return;
+          }
+
+          goldShopContainer.style.display = wasCollapsed ? 'none' : 'flex';
+          goldShopContainer.classList.toggle('hidden', wasCollapsed);
+          const toggleBtn = document.getElementById('goldToggle');
+          if (toggleBtn) {
+              toggleBtn.textContent = wasCollapsed ? '展開' : '收合';
+              toggleBtn.classList.toggle('active', !wasCollapsed);
+          }
         }
 
         function updateResourceDisplay() {
@@ -1049,9 +1108,15 @@
           orbitAngles = {};
           const cursorItem = game.upgrades.cursor;
           const glowFilter = getSpecialGlowFilter('cursor');
-          if (cursorItem.count > 0) {
-            const itemsPerRing = 30;
-            for (let i = 0; i < cursorItem.count; i++) {
+          const visibleCursorCount = Math.min(Math.max(0, Number(cursorItem.count) || 0), CURSOR_ORBIT_MAX_VISIBLE);
+          if (visibleCursorCount > 0) {
+            let renderedCount = 0;
+            for (let ringIndex = 0; ringIndex < CURSOR_RING_CAPS.length; ringIndex++) {
+              const cap = CURSOR_RING_CAPS[ringIndex];
+              const ringCount = Math.min(cap, visibleCursorCount - renderedCount);
+              if (ringCount <= 0) break;
+              for (let indexInRing = 0; indexInRing < ringCount; indexInRing++) {
+                const i = renderedCount + indexInRing;
               const el = document.createElement('div');
               el.className = 'orbit-item appear';
               el.textContent = cursorItem.icon;
@@ -1059,10 +1124,7 @@
                 el.style.filter = glowFilter;
               }
 
-              const ringIndex = Math.floor(i / itemsPerRing);
-              const indexInRing = i % itemsPerRing;
-              const itemsInThisRing = Math.min(itemsPerRing, cursorItem.count - ringIndex * itemsPerRing);
-              const baseAngle = (Math.PI * 2 * indexInRing) / itemsInThisRing;
+              const baseAngle = (Math.PI * 2 * indexInRing) / ringCount;
               const radius = cursorItem.orbitRadius + ringIndex * 38;
               const itemKey = `cursor_${i}`;
               orbitAngles[itemKey] = baseAngle;
@@ -1075,9 +1137,103 @@
               });
               orbitContainer.appendChild(el);
             }
+              renderedCount += ringCount;
+            }
           }
           updateOrbitAnimation();
           updateSideItems();
+        }
+
+        function getCursorRingPlacement(index, totalVisibleCount) {
+          let ringStart = 0;
+          for (let ringIndex = 0; ringIndex < CURSOR_RING_CAPS.length; ringIndex++) {
+            const cap = CURSOR_RING_CAPS[ringIndex];
+            const ringEnd = ringStart + cap;
+            if (index < ringEnd) {
+              const ringCount = Math.min(cap, Math.max(0, totalVisibleCount - ringStart));
+              return {
+                ringIndex,
+                ringStart,
+                ringCount,
+                indexInRing: index - ringStart
+              };
+            }
+            ringStart = ringEnd;
+          }
+          const lastRingIndex = CURSOR_RING_CAPS.length - 1;
+          return {
+            ringIndex: lastRingIndex,
+            ringStart,
+            ringCount: 0,
+            indexInRing: 0
+          };
+        }
+
+        function syncCursorOrbitItems() {
+          const cursorItem = game.upgrades.cursor;
+          const desiredCount = Math.min(Math.max(0, Number(cursorItem.count) || 0), CURSOR_ORBIT_MAX_VISIBLE);
+          const domOrbitCount = orbitContainer.querySelectorAll('.orbit-item').length;
+          if (desiredCount > 0 && (orbitItems.length !== domOrbitCount)) {
+            // Self-heal when in-memory orbit state and DOM get out of sync.
+            updateOrbits();
+            return;
+          }
+          const currentCount = orbitItems.length;
+          const glowFilter = getSpecialGlowFilter('cursor');
+
+          if (desiredCount < currentCount) {
+            for (let i = currentCount - 1; i >= desiredCount; i--) {
+              const orbitItem = orbitItems[i];
+              if (orbitItem && orbitItem.el && orbitItem.el.parentNode) {
+                orbitItem.el.parentNode.removeChild(orbitItem.el);
+              }
+              delete orbitAngles[`cursor_${i}`];
+            }
+            orbitItems.length = desiredCount;
+          } else if (desiredCount > currentCount) {
+            for (let i = currentCount; i < desiredCount; i++) {
+              const el = document.createElement('div');
+              el.className = 'orbit-item appear';
+              el.textContent = cursorItem.icon;
+              if (glowFilter) {
+                el.style.filter = glowFilter;
+              }
+
+              const placement = getCursorRingPlacement(i, desiredCount);
+              const baseAngle = (Math.PI * 2 * placement.indexInRing) / Math.max(1, placement.ringCount);
+              const radius = cursorItem.orbitRadius + placement.ringIndex * 38;
+              const itemKey = `cursor_${i}`;
+              orbitAngles[itemKey] = baseAngle;
+
+              orbitItems.push({
+                el,
+                radius,
+                itemKey,
+                speed: cursorItem.speed * 0.005
+              });
+              orbitContainer.appendChild(el);
+            }
+          }
+
+          orbitItems.forEach((item) => {
+            item.el.textContent = cursorItem.icon;
+            item.speed = cursorItem.speed * 0.005;
+            item.el.style.filter = glowFilter || '';
+          });
+          // Re-layout all orbit items whenever count changes so ring distribution
+          // stays perfectly circular instead of only positioning newly added items.
+          for (let i = 0; i < orbitItems.length; i++) {
+            const placement = getCursorRingPlacement(i, desiredCount);
+            const baseAngle = (Math.PI * 2 * placement.indexInRing) / Math.max(1, placement.ringCount);
+            const radius = cursorItem.orbitRadius + placement.ringIndex * 38;
+            const itemKey = `cursor_${i}`;
+            const orbitItem = orbitItems[i];
+            orbitItem.radius = radius;
+            orbitItem.itemKey = itemKey;
+            orbitAngles[itemKey] = baseAngle;
+          }
+
+          updateOrbitAnimation();
         }
 
         function updateOrbitAnimation() {
@@ -1113,7 +1269,8 @@
               title.style.cssText = 'width: 100%; font-size: 12px; color: #a29bfe; margin-bottom: 4px; text-align: center;';
               title.textContent = `${item.icon} ${item.name} (${item.count})`;
               group.appendChild(title);
-              for (let i = 0; i < item.count; i++) {
+              const visibleCount = Math.min(item.count, SIDE_ITEM_ICON_CAP_PER_TYPE);
+              for (let i = 0; i < visibleCount; i++) {
                 const el = document.createElement('div');
                 el.className = 'side-item';
                 el.textContent = item.icon;
@@ -1122,6 +1279,14 @@
                 }
                 el.title = `${item.name} x${item.count}`;
                 group.appendChild(el);
+              }
+              if (item.count > visibleCount) {
+                const remaining = document.createElement('div');
+                remaining.className = 'side-item';
+                remaining.style.cssText = 'width: auto; min-width: 48px; font-size: 14px; padding: 0 8px; border-radius: 12px; background: rgba(255,255,255,0.08);';
+                remaining.textContent = `+${item.count - visibleCount}`;
+                remaining.title = `${item.name} 還有 ${item.count - visibleCount} 個未展開顯示`;
+                group.appendChild(remaining);
               }
               container.appendChild(group);
             }
@@ -1136,6 +1301,7 @@
             totalClicks: game.totalClicks,
             autoBuyEnabled: game.autoBuyEnabled,
             numberUnitEnabled: game.numberUnitEnabled,
+            lastSavedAt: Date.now(),
             upgrades: {},
             goldUpgrades: {},
             specialUpgrades: {}
@@ -1213,6 +1379,18 @@
                   game.upgrades[key].shopUnlocked = parsed.upgrades[key].shopUnlocked;
                 }
                 checkSpecialUnlock(key);
+              }
+            }
+
+            const lastSavedAt = Number(parsed.lastSavedAt);
+            if (Number.isFinite(lastSavedAt) && lastSavedAt > 0) {
+              const now = Date.now();
+              const offlineSecondsRaw = Math.floor((now - lastSavedAt) / 1000);
+              const offlineSeconds = Math.max(0, Math.min(OFFLINE_GAIN_CAP_SECONDS, offlineSecondsRaw));
+              if (offlineSeconds > 0) {
+                const offlineGain = getGPS().multiplyNumber(offlineSeconds);
+                game.score = game.score.add(offlineGain);
+                console.log(`離線收益：${formatNumber(offlineSeconds)} 秒，獲得 ${formatNumber(offlineGain)} 星能`);
               }
             }
           } catch (error) {
@@ -1297,3 +1475,5 @@
         }
 
         init();
+
+
