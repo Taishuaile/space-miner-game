@@ -694,8 +694,8 @@
                 height: 100svh;
                 min-height: 100vh;
                 min-height: 100svh;
-                padding: 18px 12px 18px;
-                justify-content: center;
+                padding: calc(env(safe-area-inset-top) + 12px) 12px 18px;
+                justify-content: flex-start;
                 gap: 12px;
                 overflow: hidden;
                 isolation: isolate;
@@ -719,7 +719,7 @@
             }
             .planet { font-size: 128px; }
             .planet-container {
-                margin-top: 0;
+                margin-top: 8px;
                 animation-duration: 4s;
                 max-height: 240px;
             }
@@ -729,7 +729,7 @@
                 transform: none;
                 transform-origin: top center;
                 margin-top: 0;
-                margin-bottom: 6px;
+                margin-bottom: 18px;
                 text-align: center;
                 width: 100%;
                 position: relative;
