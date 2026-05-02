@@ -672,13 +672,18 @@
         }
 
         @media (max-width: 768px) {
+            html, body {
+                width: 100%;
+                max-width: 100%;
+            }
             body {
                 flex-direction: column;
                 height: auto;
-                min-height: 100vh;
+                min-height: 100dvh;
                 overflow-y: auto;
                 overflow-x: hidden;
-                padding-bottom: 150px;
+                padding-top: max(8px, env(safe-area-inset-top));
+                padding-bottom: calc(12px + env(safe-area-inset-bottom));
             }
             .game-area {
                 height: auto;
@@ -687,6 +692,7 @@
                 justify-content: flex-start;
                 gap: 8px;
                 overflow: hidden;
+                isolation: isolate;
             }
             .center-area {
                 height: auto;
@@ -707,6 +713,7 @@
             .planet-container {
                 margin-top: 0;
                 animation-duration: 4s;
+                max-height: 190px;
             }
             .orbit-container { width: 190px; height: 190px; }
             .orbit-item { font-size: 20px; width: 26px; height: 26px; }
@@ -748,12 +755,13 @@
                 margin-left: 8px;
             }
             .control-panel {
-                position: fixed;
-                left: 8px;
-                right: 8px;
-                bottom: 8px;
+                position: sticky;
+                left: auto;
+                right: auto;
+                bottom: max(8px, env(safe-area-inset-bottom));
                 top: auto;
-                width: auto;
+                width: calc(100% - 16px);
+                margin: 8px auto 0;
                 padding: 10px 12px;
                 border-radius: 10px;
                 backdrop-filter: blur(8px);
