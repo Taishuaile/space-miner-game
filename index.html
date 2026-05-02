@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>¤ÓªÅ±ÄÄq - Space Miner</title>
+    <title>å¤ªç©ºæ¡ç¤¦ - Space Miner</title>
     <style>
         :root {
             --primary: #6c5ce7;
@@ -241,7 +241,7 @@
         }
 
         .upgrade-item.best-cp::before {
-            content: '³Ì¨Î CP';
+            content: 'æœ€ä½³ CP';
             position: absolute;
             top: -10px;
             right: 10px;
@@ -397,31 +397,31 @@
           display: flex;
           flex-wrap: wrap;
           gap: 8px;
-          min-height: 80px; /* ?Ÿå?é«˜åº¦? å€?*/
-          max-height: 160px; /* ?åˆ¶?®ç??“å…·?„æ?å¤§é?åº?*/
+          min-height: 80px; /* ?î¸?æ“ƒî¦¶æ¼²?îºÂ€?*/
+          max-height: 160px; /* ?î“ï—?æ¡ƒ??îš¥ï†?ï„“?æ†­æŠ˜?æ‘¨?*/
           padding: 15px;
           background: rgba(0, 0, 0, 0.25);
           border-radius: 8px;
           align-items: center;
           justify-content: center;
           border: 1px solid rgba(255, 255, 255, 0.05);
-          overflow-y: auto; /* ?¶å…§å®¹é?å¤šæ?é¡¯ç¤º?‚ç›´æ»¾å?æ¢?*/
-          overflow-x: hidden; /* ?±è?æ°´å¹³æº¢å‡º */
+          overflow-y: auto; /* ?å—…ï…±æ‘°å¯¥?æ†­î«±?æ†¿èˆå…§?î¿šî­œçš›æ›‰?ç’‡?*/
+          overflow-x: hidden; /* ?æ¢¯?ç˜æ¸¸åƒçšï¼·ïŠ¾ */
         }
 
-        /* ?¹æ??“å…·çµ„æ¨£å¼?*/
+        /* ?å¯??îš¥ï†è¯ï„“è¦‹æ’˜?*/
         .side-item-group.special-group {
-          border: 2px solid #cd7f32; /* ?…è‰² */
+          border: 2px solid #cd7f32; /* ?ï†²ï° */
           background: rgba(205, 127, 50, 0.1);
         }
 
         .side-item-group.special-group.silver {
-          border: 2px solid #c0c0c0; /* ?€??*/
+          border: 2px solid #c0c0c0; /* ?Â€??*/
           background: rgba(192, 192, 192, 0.1);
         }
 
         .side-item-group.special-group.gold {
-          border: 2px solid #ffd700; /* ?‘è‰² */
+          border: 2px solid #ffd700; /* ?î•®ï° */
           background: rgba(255, 215, 0, 0.1);
           box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
         }
@@ -451,7 +451,7 @@
           background: rgba(255, 215, 0, 0.2);
         }
 
-        /* ?ªå?ç¾©å–®çµ„å…§?„æ»¾?•æ?æ¨?? */
+        /* ?èŠ¸?è¢æ‹™î¡…è¯ï„’ï…±?ï„“é?îŸ ?ç’…?? */
         .side-item-group::-webkit-scrollbar {
           width: 4px;
         }
@@ -470,7 +470,7 @@
           background: rgba(255, 255, 255, 0.4);
         }
 
-        /* ?ªå?ç¾©å–®çµ„å…§?„æ»¾?•æ?æ¨?? */
+        /* ?èŠ¸?è¢æ‹™î¡…è¯ï„’ï…±?ï„“é?îŸ ?ç’…?? */
         .side-item-group::-webkit-scrollbar {
           width: 4px;
         }
@@ -694,7 +694,7 @@
                 height: 100svh;
                 min-height: 100vh;
                 min-height: 100svh;
-                padding: 18px 12px 18px;
+                padding: calc(env(safe-area-inset-top) + 12px) 12px 18px;
                 justify-content: center;
                 gap: 12px;
                 overflow: hidden;
@@ -793,10 +793,10 @@
     <div class="game-area">
         <div class="score-container">
             <div id="score">0</div>
-            <div class="per-sec">¨C¬í¬P¯à: <span id="gps">0</span></div>
+            <div class="per-sec">æ¯ç§’æ˜Ÿèƒ½: <span id="gps">0</span></div>
         </div>
         <div class="planet-container" id="planetBtn">
-            <div class="planet">??</div>
+            <div class="planet">ğŸŒ</div>
             <div class="orbit-container" id="orbitContainer"></div>
         </div>
     </div>
@@ -806,23 +806,23 @@
     <div class="control-panel">
         <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: #fff; font-size: 14px;">
             <input type="checkbox" id="autoBuyCheckbox" onchange="toggleAutoBuy()" style="width: 18px; height: 18px; cursor: pointer;">
-            <span>¦Û°ÊÁÊ¶R³Ì¨Î CP ¹D¨ã</span>
+            <span>è‡ªå‹•è³¼è²·æœ€ä½³ CP é“å…·</span>
         </label>
         <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: #fff; font-size: 14px; margin-top: 8px;">
             <input type="checkbox" id="numberUnitCheckbox" onchange="toggleNumberUnits()" style="width: 18px; height: 18px; cursor: pointer;">
-            <span>¬P¯àÅã¥Ü³æ¦ì</span>
+            <span>æ˜Ÿèƒ½é¡¯ç¤ºå–®ä½</span>
         </label>
-        <button onclick="multiplyScoreByTen()" style="margin-top: 10px; width: 100%; background: rgba(108, 92, 231, 0.85); color: #fff; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 8px 10px; cursor: pointer; font-size: 13px;">´ú¸Õ¡G¬P¯à x10</button>
+        <button onclick="multiplyScoreByTen()" style="margin-top: 10px; width: 100%; background: rgba(108, 92, 231, 0.85); color: #fff; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 8px 10px; cursor: pointer; font-size: 13px;">æ¸¬è©¦ï¼šæ˜Ÿèƒ½ x10</button>
     </div>
     <div class="shop-area">
         <div class="gold-control">
-            <h3>¯S®í±j¤Æ</h3>
-            <button class="gold-toggle active" id="goldToggle" onclick="toggleGoldShop()">¦¬¦X</button>
+            <h3>ç‰¹æ®Šå¼·åŒ–</h3>
+            <button class="gold-toggle active" id="goldToggle" onclick="toggleGoldShop()">æ”¶åˆ</button>
         </div>
         <div class="gold-shop-container" id="goldShopContainer"></div>
-        <h2>¤É¯Å°Ó©±</h2>
+        <h2>å‡ç´šå•†åº—</h2>
         <div id="upgrades-list"></div>
-        <button class="reset-btn" onclick="resetGame()">­«¸m¹CÀ¸</button>
+        <button class="reset-btn" onclick="resetGame()">é‡ç½®éŠæˆ²</button>
     </div>
     <script src="game.js"></script>
 </body>
