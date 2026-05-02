@@ -658,22 +658,101 @@
             background: #d63031;
         }
 
+        .control-panel {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            z-index: 50;
+            background: rgba(0,0,0,0.6);
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            width: 260px;
+            box-sizing: border-box;
+        }
+
         @media (max-width: 768px) {
-            body { flex-direction: column; }
-            .game-area { height: 35vh; padding: 10px; }
-            .center-area { height: 35vh; padding: 10px; }
-            .shop-area { max-width: 100%; height: 30vh; border-left: none; border-top: 1px solid rgba(255,255,255,0.2); }
-            .planet { font-size: 100px; }
-            .orbit-container { width: 200px; height: 200px; }
-            .orbit-item { font-size: 20px; width: 25px; height: 25px; }
+            body {
+                flex-direction: column;
+                height: auto;
+                min-height: 100vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                padding-bottom: 150px;
+            }
+            .game-area {
+                height: 38vh;
+                min-height: 280px;
+                padding: 8px 10px 4px;
+            }
+            .center-area {
+                height: 24vh;
+                min-height: 160px;
+                padding: 6px 10px;
+            }
+            .shop-area {
+                max-width: 100%;
+                height: 38vh;
+                min-height: 300px;
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.2);
+                padding: 12px;
+            }
+            .planet { font-size: 108px; }
+            .orbit-container { width: 220px; height: 220px; }
+            .orbit-item { font-size: 20px; width: 26px; height: 26px; }
+            .score-container {
+                transform: scale(0.95);
+                transform-origin: top center;
+                margin-top: 4px;
+            }
             .side-item { font-size: 18px; width: 26px; height: 26px; }
-            .side-items-container { padding: 10px; gap: 6px; max-height: 250px; overflow-y: auto; }
+            .side-items-container {
+                padding: 10px;
+                gap: 6px;
+                max-height: none;
+                margin-top: 0;
+            }
             .side-item-group { padding: 4px; min-height: 26px; gap: 4px; }
-            .gold-shop-container { padding: 8px 10px; gap: 8px; min-height: 80px; }
+            .gold-shop-container { padding: 8px 10px; gap: 8px; min-height: 70px; }
             .gold-icon { font-size: 16px; }
             .gold-cost { font-size: 7px; }
             .gold-control { margin-bottom: 8px; }
-            .gold-toggle { padding: 3px 10px; font-size: 11px; }
+            .gold-toggle { padding: 5px 12px; font-size: 12px; }
+            .upgrade-item {
+                min-height: 74px;
+                padding: 10px 12px;
+            }
+            .upgrade-item .name {
+                font-size: 15px;
+            }
+            .upgrade-item .cost, .upgrade-item .bonus {
+                font-size: 12px;
+            }
+            .count-badge {
+                font-size: 1.25rem;
+                margin-left: 8px;
+            }
+            .control-panel {
+                position: fixed;
+                left: 8px;
+                right: 8px;
+                bottom: 8px;
+                top: auto;
+                width: auto;
+                padding: 10px 12px;
+                border-radius: 10px;
+                backdrop-filter: blur(8px);
+                background: rgba(8, 8, 16, 0.82);
+            }
+            .control-panel label {
+                font-size: 13px;
+            }
+            .control-panel button {
+                font-size: 14px !important;
+                padding: 10px 12px !important;
+                border-radius: 8px !important;
+            }
         }
     </style>
 </head>
@@ -692,7 +771,7 @@
     <div class="center-area">
         <div class="side-items-container" id="sideItemsContainer"></div>
     </div>
-    <div style="position: absolute; top: 10px; left: 20px; z-index: 50; background: rgba(0,0,0,0.6); padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2);">
+    <div class="control-panel">
         <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: #fff; font-size: 14px;">
             <input type="checkbox" id="autoBuyCheckbox" onchange="toggleAutoBuy()" style="width: 18px; height: 18px; cursor: pointer;">
             <span>自動購買最佳 CP 道具</span>
