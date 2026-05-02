@@ -689,7 +689,11 @@
                 padding-bottom: env(safe-area-inset-bottom);
             }
             .game-area {
-                min-height: 100dvh;
+                flex: none;
+                height: 100vh;
+                height: 100svh;
+                min-height: 100vh;
+                min-height: 100svh;
                 padding: 18px 12px 18px;
                 justify-content: center;
                 gap: 12px;
@@ -697,6 +701,7 @@
                 isolation: isolate;
             }
             .center-area {
+                flex: none;
                 height: auto;
                 min-height: 46dvh;
                 padding: 10px 10px 8px;
@@ -704,6 +709,7 @@
                 z-index: 12;
             }
             .shop-area {
+                flex: none;
                 max-width: 100%;
                 height: auto;
                 min-height: 62dvh;
